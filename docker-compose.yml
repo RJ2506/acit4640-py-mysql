@@ -1,7 +1,7 @@
 version: "3"
 services:
   app:
-    image: rj/app:latest
+    image: des0/app:latest
     container_name: app
     env_file: my_vars.env
     depends_on:

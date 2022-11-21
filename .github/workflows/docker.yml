@@ -19,4 +19,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
             push: true
-            tags: rj/app:latest 
+            tags: des0/app:latest 
