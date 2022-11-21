@@ -9,5 +9,5 @@ COPY ./backend .
 RUN python -m pip install -r ./requirements.txt
 
 COPY ./backend/backend.conf .
-EXPOSE 8080
-CMD /app/.local/bin/gunicorn wsgi:app -b 0.0.0.0:8080
+EXPOSE 8000
+CMD CMD ["/bin/bash", "start.sh"]
