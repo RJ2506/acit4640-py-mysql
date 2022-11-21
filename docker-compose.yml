@@ -1,15 +1,14 @@
 version: "3"
 services:
-  app:
-    image: des0/app:latest
+  backend:
+    image:  ${{ secrets.DOCKERHUB_USERNAME }}/app:latest
     container_name: app
     env_file: my_vars.env
     depends_on:
       - db
 
-  nginx:
-    build: frontend
-    image: web:latest
+  web:
+    image: des0/web:latest
     env_file: my_vars.env
     ports:
       - 8080:80
