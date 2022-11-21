@@ -4,3 +4,10 @@ on:
   push:
     branches:
       - 'master'
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - obtain_code
+      - build_docker
+      - push_image
