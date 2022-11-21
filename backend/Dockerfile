@@ -8,6 +8,6 @@ WORKDIR /app/src
 COPY . .
 RUN python -m pip install -r ./requirements.txt
 
-COPY backend.conf .
+COPY backend.conf.template .
 EXPOSE 8000
 CMD ["/bin/bash", "start.sh"]
