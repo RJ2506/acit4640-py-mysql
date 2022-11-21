@@ -5,9 +5,9 @@ RUN useradd -m -d /app backend
 USER backend
 WORKDIR /app/src
 
-COPY ./backend .
+COPY . .
 RUN python -m pip install -r ./requirements.txt
 
-COPY ./backend/backend.conf .
+COPY backend.conf .
 EXPOSE 8000
 CMD CMD ["/bin/bash", "start.sh"]

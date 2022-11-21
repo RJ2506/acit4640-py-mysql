@@ -8,7 +8,7 @@ services:
       - db
 
   web:
-    image: des0/web:latest
+    image: ${{ secrets.DOCKERHUB_USERNAME }}/web:latest 
     env_file: my_vars.env
     ports:
       - 8080:80
