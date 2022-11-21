@@ -1,21 +1,21 @@
 version: "3"
 services:
   backend:
-    image:  ${{ secrets.DOCKERHUB_USERNAME }}/app:latest
+    image:  des0/app:latest
     container_name: app
     env_file: my_vars.env
     depends_on:
       - db
 
   web:
-    image: ${{ secrets.DOCKERHUB_USERNAME }}/web:latest 
+    image: des0/web:latest 
     env_file: my_vars.env
     ports:
       - 8080:80
     expose:
       - 8080
     depends_on:
-      - app
+      - backend
       - db
   db:
     image: mysql
